@@ -101,7 +101,7 @@ def play_all(table, print_or_not_print):
         state = el
         epochs = 0
         done = False
-        while not done and epochs < 100:
+        while not done and epochs < env.rows_num * env.cols_num:
             epochs += 1
             action = np.argmax(table[state])
             state, reward, done = env.step(action)
